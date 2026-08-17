@@ -4,7 +4,8 @@ import {
   FiHome,
   FiPlusSquare,
   FiList,
-  FiMessageCircle
+  FiMessageCircle,
+  FiGrid
 } from 'react-icons/fi'
 
 const Sidebar = () => {
@@ -21,7 +22,7 @@ const Sidebar = () => {
 
       {/* Dashboard */}
       <NavLink end to={'/admin'} className={linkClass}>
-        <FiHome className='text-xl text-primary' />
+        <FiGrid className='text-xl text-primary' />
         <p className='hidden md:inline-block text-white'>Dashboard</p>
       </NavLink>
 
@@ -29,6 +30,10 @@ const Sidebar = () => {
       <NavLink to={'/admin/addBlog'} className={linkClass}>
         <FiPlusSquare className='text-xl text-primary' />
         <p className='hidden md:inline-block text-white'>Add Blogs</p>
+      </NavLink>
+      <NavLink to={'/admin/addCategory'} className={linkClass}>
+        <FiPlusSquare className='text-xl text-primary' />
+        <p className='hidden md:inline-block text-white'>Add Category</p>
       </NavLink>
 
       {/* List Blog */}
@@ -41,6 +46,11 @@ const Sidebar = () => {
       <NavLink to={'/admin/comments'} className={linkClass}>
         <FiMessageCircle className='text-xl text-primary' />
         <p className='hidden md:inline-block text-white'>Comments</p>
+      </NavLink>
+
+      <NavLink to={'/'} className={linkClass}>
+        <FiHome className='text-xl text-primary' />
+        <p className='hidden md:inline-block text-white'>Home</p>
       </NavLink>
 
     </div>
