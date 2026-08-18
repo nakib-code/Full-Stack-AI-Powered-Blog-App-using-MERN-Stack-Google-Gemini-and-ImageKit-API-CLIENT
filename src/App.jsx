@@ -11,6 +11,7 @@ import 'quill/dist/quill.snow.css'
 import {Toaster} from 'react-hot-toast'
 import { useAppContext } from "./context/AppContest"
 import Categories from "./pages/admin/Categories"
+import UpdateBlog from "./pages/admin/UpdateBlog"
 
 const App = () => {
 
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/admin" element={token ? <Layout /> : <Login />}>
         <Route index element={<Dashboard />}/>
         <Route path="addBlog" element={<AddBlog />}/>
+        <Route path="/admin/update-blog/:id" element={<UpdateBlog />}/>
         <Route path="addCategory" element={<Categories />}/>
         <Route path="listBlog" element={<ListBlog />}/>
         <Route path="comments" element={<Comment />}/>
